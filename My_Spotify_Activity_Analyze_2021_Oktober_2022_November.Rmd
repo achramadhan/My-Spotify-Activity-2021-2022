@@ -87,18 +87,17 @@ streaming_history %>% group_by(artist_name) %>%
 data di atas merupakan jumlah lagu yang sering di dengarkan berdasarkan artist name, posisi teratas adalah "Jay Ham" sebanyak 1065 dengan total jumlah streaming 160464.51 detik atau 44.6 jam atau 1.86 hari
 
 
-### Total Listened Songs by Hour
+### Average Listened Songs by Hour
 ```{r}
 streaming_history %>% mutate(hour = hour(end_time)) %>% 
   group_by(hour) %>% 
-  summarise(total_listened = n()) %>%
-  ggplot(aes(factor(hour), total_listened))+
+  summarise(avg_listened = mean(hour)) %>%
+  ggplot(aes(factor(hour), avg_listened))+
   geom_bar(stat='identity', fill='orange')+
-  geom_text(aes(label=total_listened),vjust=-0.7, size=3, angle = 30 )+
+  geom_text(aes(label=avg_listened),vjust=-0.7, size=3, angle = 30 )+
   xlab("hour")
 ```
 
-aktivitas selama setahun yang ditunjukkan, pengguna lebih banyak mendengarkan lagu di jam 6 dan jam 7 pagi, sedangkan siang hari pengguna lebih banyak mendengarkan lagu di jam 13, jam 14, dan jam 15. waktu yang digunakan adalah zona waktu Jakarta. pengguna paling banyak mendengarkan lagu di jam 15 sebanyak 2126 lagu
 
 
 ### Total Listened Songs By Month
