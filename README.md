@@ -36,9 +36,9 @@ library(rjson)
 ## Process
 import the json file using functionn "fromJSON"
 ```{r echo=TRUE, message=FALSE, warning=FALSE, paged.print=FALSE}
-result <- fromJSON(file= "MyData/StreamingHistory0.json")
-result1 <- fromJSON(file= "MyData/StreamingHistory1.json")
-result2 <- fromJSON(file= "MyData/StreamingHistory2.json")
+result <- fromJSON(file= "./MyData/StreamingHistory0.json")
+result1 <- fromJSON(file= "./MyData/StreamingHistory1.json")
+result2 <- fromJSON(file= "./MyData/StreamingHistory2.json")
 head(result, 1)
 ```
 Because the file is in the form of JSON, the data is in the form of a list. To convert it into a data frame, use the following command:
