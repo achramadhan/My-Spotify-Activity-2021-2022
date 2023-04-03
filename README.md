@@ -3,7 +3,7 @@ This analysis is a personal project to find out my activities as a Spotify appli
 
 
 
-RMD_HTML Ver.
+Rmd_HTML Ver.
 https://achramadhan.github.io/My-Spotify-Activity-2021-2022/Index.html
 
 Tableau Ver.
